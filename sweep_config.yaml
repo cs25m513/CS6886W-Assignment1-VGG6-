@@ -1,0 +1,24 @@
+program: run_sweep.py
+method: bayes
+metric:
+  name: val_acc
+  goal: maximize
+parameters:
+  activation:
+    values: ["relu", "sigmoid", "tanh", "silu", "gelu", "leaky_relu", "selu"]
+  batch_norm:
+    values: [true, false]
+  batch_size:
+    values: [32, 64, 128, 256, 512]
+  epochs:
+    values: [20, 30, 50, 80, 100]
+  learning_rate:
+    values: [0.0001, 0.0002, 0.0005, 0.001, 0.005, 0.01]
+  momentum:
+    values: [0.0, 0.5, 0.9]
+  optimizer:
+    values: ["sgd", "nesterov", "adam", "adagrad", "rmsprop", "nadam"]
+  weight_decay:
+    values: [0.0, 0.00005, 0.0001, 0.0005]
+  seed:
+    value: 42

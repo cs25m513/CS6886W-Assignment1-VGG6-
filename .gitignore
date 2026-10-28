@@ -1,0 +1,17 @@
+# Virtual environments and Python cache
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Dataset cache (automatically downloaded on first run)
+data/
+
+# W&B local run logs
+wandb/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
